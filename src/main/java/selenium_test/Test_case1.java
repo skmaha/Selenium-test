@@ -9,7 +9,7 @@ public class Test_case1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
-		//System.setProperty("webdriver.chrome.driver","C:\\Users\\gcit\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		driver.get("https://www.fb.com");
 		driver.manage().window().maximize();
 		driver.findElement(By .xpath("//button[@title ='Allow essential and optional cookies' ]")).click();

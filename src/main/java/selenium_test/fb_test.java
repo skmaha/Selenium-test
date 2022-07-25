@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 public class fb_test {
 
 	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		WebDriver driver = new ChromeDriver();
 			driver.get("http:\\www.facebook.com");
 			driver.findElement(By .xpath("//button[@title ='Allow essential and optional cookies' ]")).click();

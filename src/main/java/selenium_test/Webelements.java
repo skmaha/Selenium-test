@@ -8,7 +8,7 @@ public class Webelements {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver .get("https://www.amazon.com/");
 		driver.manage().window().maximize();

@@ -10,7 +10,7 @@ public class NestedForLoopUsingBreak {
 	static ChromeDriver driver;
 	public static void main(String[] args) throws InterruptedException {
 		//System.setProperty("webdriver.chrome.driver","ChromeDriver.exe");
-
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		driver = new ChromeDriver();
 		driver.get("https://demo.openmrs.org/openmrs/appointmentschedulingui/manageAppointmentTypes.page");
 		driver.findElement(By.id("username")).sendKeys("Admin");

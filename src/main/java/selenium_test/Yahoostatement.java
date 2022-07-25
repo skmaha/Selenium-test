@@ -8,7 +8,7 @@ public class Yahoostatement {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.yahoo.com/lifestyle/meet-covid-super-dodgers-143320652.html");
 		driver.manage().window().maximize();

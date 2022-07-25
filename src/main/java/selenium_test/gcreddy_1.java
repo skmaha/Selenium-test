@@ -9,6 +9,7 @@ public class gcreddy_1 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
