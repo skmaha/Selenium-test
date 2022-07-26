@@ -9,7 +9,5 @@ public class forloop_2 {
 		for (int i=1; i<=X; i++) {
 			System.out.println("I am learning JAVA");
 		}
-
 	}
-
 }
