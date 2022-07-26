@@ -29,10 +29,18 @@ public class fb_test {
 			driver.findElement(By.xpath("//*[@id=\"day\"]/option[8]")).click();
 			driver.findElement(By.xpath("//*[@id=\"year\"]/option[33]")).click();
 			
+			driver.navigate().to("https://www.ntnu.edu/learnnow/6/alex");
+			Thread.sleep(5000);
+			driver.findElement(By.linkText("6A.4 Numerals")).click();
+			driver.findElement(By.cssSelector("p:nth-child(1) audio:nth-child(1)")).click();
+			driver.findElement(By.xpath("//a[@class='lfr-nav-item'][normalize-space()='Dina']")).click();
+
+		
+
 			
-			System.out.println("Login");
-			WebElement lstitem=driver.findElement(By.id("userNavigationLabel"));
-			lstitem.click();
+			//System.out.println("Login");
+			//WebElement lstitem=driver.findElement(By.id("userNavigationLabel"));
+			//lstitem.click();
 	}
 
 }
