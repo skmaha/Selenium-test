@@ -2,14 +2,14 @@ package selenium_test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test_case1 {
 
 	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
 		System.setProperty("webdriver.chrome.driver", "/Users/sunilk/chromedriver");
+		WebDriver driver = new ChromeDriver();
+
 		driver.get("https://www.fb.com");
 		driver.manage().window().maximize();
 		driver.findElement(By .xpath("//button[@title ='Allow essential and optional cookies' ]")).click();

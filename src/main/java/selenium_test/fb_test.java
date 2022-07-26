@@ -38,9 +38,9 @@ public class fb_test {
 		
 
 			
-			//System.out.println("Login");
-			//WebElement lstitem=driver.findElement(By.id("userNavigationLabel"));
-			//lstitem.click();
+			System.out.println("Login");
+			WebElement lstitem=driver.findElement(By.id("userNavigationLabel"));
+			lstitem.click();
 	}
 
 }
