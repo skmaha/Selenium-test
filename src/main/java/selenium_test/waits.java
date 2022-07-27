@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class waits {
 
     public static void main(String[] args) throws InterruptedException {
-        explicitWait();
-        //implicitlyWait();
+        //explicitWait();
+        implicitlyWait();
     }
     
     // best explanation by pramod https://www.youtube.com/watch?v=upDhIhDezxQ
@@ -26,10 +26,11 @@ public class waits {
         driver.findElement(By.xpath("//*[@id='L2AGLb']")).click(); // to accept the cookies "Accept all" button click
         //driver.findElement(By.xpath("input[title='Search']")).sendKeys("Cheese" + Keys.ENTER);
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
-        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(20))
+        WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(30))
         .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
-        ((Timeouts) driver.manage()).implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         System.out.println(firstResult.getText());
+        driver.quit();
     }
 
     //https://www.seleniumeasy.com/selenium-tutorials/waits-and-timeout-selenium-4
@@ -39,7 +40,9 @@ public class waits {
         driver.get("https://www.hyrtutorials.com/p/waits-demo.html");
         driver.findElement(By.cssSelector("#btn2")).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.findElement(By.xpath("(//input[@id='txt2'])[1]")).sendKeys("This is Cool-2");
+        WebElement content = driver.findElement(By.xpath("(//input[@id='txt2'])[1]"));
+        content.sendKeys("This is Cool-2");
+        System.out.println("content is : "+content.getAttribute("value"));
         Thread.sleep(5000);
         driver.quit();
     }
