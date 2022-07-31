@@ -1,9 +1,6 @@
 package selenium_test;
-
 import java.time.Duration;
-
 import javax.swing.text.AbstractDocument.Content;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,8 +13,8 @@ public class AlertsHandling {
    public static void main(String[] args) throws InterruptedException {
     System.setProperty("webdriver.gecko.driver", "/Users/sunilk/geckodriver");
     // promt_alert();
-    confirm_alert();
-    // single_alert();
+    // confirm_alert();
+    single_alert();
 }
 
 private static void promt_alert() throws InterruptedException {
@@ -33,7 +30,6 @@ private static void promt_alert() throws InterruptedException {
     driver.switchTo().alert().accept();
     driver.quit();
 }
-
 private static void confirm_alert() throws InterruptedException {
     WebDriver driver = new FirefoxDriver();
     driver.get("https://www.selenium.dev/documentation/webdriver/browser/alerts/");
@@ -44,7 +40,6 @@ private static void confirm_alert() throws InterruptedException {
     driver.switchTo().alert().accept();
     driver.quit();
 }
-
 private static void single_alert() throws InterruptedException {
     WebDriver driver = new FirefoxDriver();
     driver.get("https://www.selenium.dev/documentation/webdriver/browser/alerts/");
@@ -56,5 +51,5 @@ private static void single_alert() throws InterruptedException {
     // Alert accept/dismiss
     driver.switchTo().alert().accept();
     driver.quit();
-}
+    }
 }

@@ -19,7 +19,7 @@ public class ExplicitWaitDemo {
 
 		// Start application
 		driver.get("http://seleniumpractise.blogspot.in/2016/08/how-to-use-explicit-wait-in-selenium.html");
-
+		
 		// Click on timer button to start
 		driver.findElement(By.xpath("//button[text()='Click me to start timer']")).click();
 
